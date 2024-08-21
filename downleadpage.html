@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="shortcut icon" href="images/fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+    <link rel="stylesheet" href="/scripts/unpkg.com_swiper@7.4.1_swiper-bundle.min.css">
+
+</head>
+<body>
+    
+    <header>
+
+        <div class="nav container" >
+            <!-- logo -->
+            <a href="index.html" class="logo">Earo <span>Games</span></a>
+            <!-- nav ico -->
+            <div class="nav-icons">
+                <i class='bx bx-bell bx-tada' id="bell-icon"><span></span></i>
+                <i class='bx bxs-download'></i>
+                <div class="menu-icons">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </div>
+        </div>
+            <!-- menu -->
+            <div class="menu">
+                <img src="/images/menu.png" alt="">
+                <div class="navbar">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#trending">trending</a></li>
+                    <li><a href="#">Games</a></li>
+                    <li><a href="#">#</a></li>
+                    <li><a href="#">#</a></li>
+                </div>
+            </div>
+            <!-- notification -->
+            <div class="notification">
+                <div class="notification-box">
+                    <i class='bx bxs-check-circle'></i>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                </div>
+                <div class="notification-box box-color">
+                    <i class='bx bxs-x-circle'></i>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container3">
+        <h2>God Of War</h2>
+
+        <div class="image">
+            <img src="images/img-1.jpg" alt="">
+        </div>
+        <div class="image">
+            <img src="images/img-2.jpg" alt="">
+        </div>
+        <div class="image">
+            <img src="images/img-3.jpg" alt="">
+        </div>
+        <div class="image">
+            <img src="images/img-4.jpg" alt="">
+        </div>
+        <div class="image">
+            <img src="images/img-5.jpg" alt="">
+        </div>
+
+        <div class="button">
+            <a onclick="nextimg(-1)" class="prev">&#10094;</a>
+            <a onclick="nextimg(1)" class="next">&#10095;</a>
+        </div>
+
+            
+    </div>
+
+<div class="nav1">
+    <button class="tablink" onclick="openCity('London', this)" id="defaultOpen"> <i class='bx bx-info-circle'></i>About</button>
+    <button class="tablink" onclick="openCity('Paris', this, )"> <i class='bx bx-chip'></i>Systeme Requirement</button>
+    <button class="tablink" onclick="openCity('Tokyo', this, )"> <i class='bx bxs-download'></i>Downlead Link</button>
+         <div id="London" class="tabcontent">
+  <h1>London</h1>
+  <p>London is the capital city of England.</p>
+</div>
+
+<div id="Paris" class="tabcontent">
+    System Requirements
+
+    Requires a 64-bit processor and operating system.<br>
+    OS: Windows 10 64-bit.<br>
+    Processor: Intel Core i5 6600k or AMD Ryzen 5 1600.<br>
+    Memory: 8 GB RAM.<br>
+    Graphics: NVIDIA GeForce GTX 1050 Ti or AMD Radeon RX 570.<br>
+    DirectX: Version 12.<br>
+    Network: Broadband Internet connection.<br>
+    Storage: 100 GB available space.<br>
+</div>
+
+<div id="Tokyo" class="tabcontent">
+    <h2>Download</h2>
+    <div class="download-links">
+        <a href="/images/fav.png" download="">for android</a>
+        <a href="#">for ios</a>
+        <a href="#">for windows</a>
+
+    </div>
+</div>
+
+<div id="Oslo" class="tabcontent">
+  <h1>Oslo</h1>
+  <p>Oslo is the capital of Norway.</p>
+</div>
+
+</div>
+
+   
+   
+
+   
+
+  <!-- copyright -->
+  <div class="copyright container">
+    <a href="#" class="logo">Game <span>Store</span></a>
+    <p>&#169; Earogames all right reserved</p>
+</div>
+
+    <!-- slide -->
+    <script>
+
+        var imageno =1;
+        displayimg(imageno);
+
+        function nextimg(n){
+            displayimg(imageno += n)
+        }
+
+        function currentSlide(n){
+            displayimg(imageno = n)
+        }
+
+        function displayimg(n){
+            var i;
+            var image = document.getElementsByClassName("image");
+            var dots = document.getElementsByClassName("dot");
+
+            if(n > image.length){
+                imageno = 1;
+            }
+
+            if(n < 1){
+                imageno = image.length;
+            }
+
+            for(i=0; i < image.length; i++){
+                image[i].style.display = "none";
+            }
+
+            for(i=0; i < dots.length; i++){
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+
+            image[imageno - 1].style.display ="block";
+            dots[imageno - 1].className += " active";
+
+        }
+
+
+    </script>
+    <script src="script.js"></script>
+    <script src="/scripts/unpkg.com_swiper@7.4.1_swiper-bundle.min.js"></script>
+   <script>
+    const aboutbtn = document.getElementById("about");
+const about = document.querySelectorAll("#abouttxt");
+const sys = document.querySelectorAll("#systxt,#downloadtxt");
+
+
+aboutbtn.addEventListener('click', () => {
+    // Loop through each item and apply the CSS change
+    sys.forEach(item => {
+        item.style.display = 'none';
+        
+        
+    });
+    about.forEach(item => {
+        item.style.display = 'block';
+        
+        
+    });
+})
+
+
+
+
+
+   </script>
+   <script>
+    
+    const down = document.getElementById("download");
+const item1 = document.querySelectorAll("#downloadtxt");
+const others = document.querySelectorAll("#systxt,#abouttxt");
+
+
+down.addEventListener('click', () => {
+    // Loop through each item and apply the CSS change
+    others.forEach(item => {
+        item.style.display = 'none';
+        
+        
+    });
+    item1.forEach(item => {
+        item.style.display = 'block';
+        
+        
+    });
+})
+   </script>
+   <script>
+    function openCity(cityName, elmnt, color) {
+  // Hide all elements with class="tabcontent" by default */
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Remove the background color of all tablinks/buttons
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+
+  // Show the specific tab content
+  document.getElementById(cityName).style.display = "block";
+
+  // Add the specific color to the button used to open the tab content
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+   </script>
+</body>
+</html>
