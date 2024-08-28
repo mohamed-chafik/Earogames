@@ -30,29 +30,6 @@ To use Earo Games, follow these instructions:
 2. **Review Games**:
    - After playing a game, visit the game’s page to leave a review and rate it.
 
-## How to Run Locally
-
-If you want to run a local version of Earo Games for development or testing:
-
-1. **Clone the Repository**:
-    ```bash
-    git clone https://github.com/yourusername/earo-games.git
-    cd earo-games
-    ```
-
-2. **Install Dependencies**:
-    ```bash
-    npm install
-    ```
-
-3. **Start the Development Server**:
-    ```bash
-    npm start
-    ```
-
-4. **Access the Application**:
-    Open your web browser and go to `http://localhost:3000`.
-
 ## Contributing
 
 Contributions to enhance Earo Games are welcome. To contribute:
