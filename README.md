@@ -30,15 +30,7 @@ To use Earo Games, follow these instructions:
 2. **Review Games**:
    - After playing a game, visit the game’s page to leave a review and rate it.
 
-## Contributing
 
-Contributions to enhance Earo Games are welcome. To contribute:
-
-1. Fork the repository on GitHub.
-2. Create a new branch (`git checkout -b feature-branch`).
-3. Make your changes and commit them (`git commit -m 'Add new feature'`).
-4. Push to the branch (`git push origin feature-branch`).
-5. Create a Pull Request on GitHub.
 
 ## License
 
