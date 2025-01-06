@@ -1,7 +1,7 @@
 # Earogames
 # Earo Games
 
-**Earo Games** is a simple platform for indie game developers to upload their games and for users to download and review them. The site currently allows developers to submit their games through a form and users to browse, download, and provide feedback.
+**[Earo Games](https://earogames.netlify.app)** is a simple platform for indie game developers to upload their games and for users to download and review them. The site currently allows developers to submit their games through a form and users to browse, download, and provide feedback.
 
 ## Features
 
